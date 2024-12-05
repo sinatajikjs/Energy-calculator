@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title name="viewport">Energy Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="./calculator-2017-10-10.jpg" type="image/x-icon">
+  </head>
+  <body class="bg-black">
+    <div class="flex flex-col gap-8 py-8 px-4 max-w-[500px] mx-auto">
+      <div class="flex flex-col gap-4">
+        <h2 class="text-white m-0 text-2xl font-bold">Your monthly usage:</h2>
+
+        <div class="flex flex-col gap-5">
+          <div class="flex flex-col gap-2">
+            <label class="text-white">Gas (kWh)</label>
+            <input
+              class="px-2 py-1 bg-gray-700 text-white rounded outline-none focus:ring-1 focus:ring-violet-400"
+              id="gas-usage"
+              type="text"
+              value="1088.17"
+            />
+          </div>
+          <div class="flex flex-col gap-2">
+            <label class="text-white">Electricity (kWh)</label>
+            <input
+              id="electricity-usage"
+              class="px-2 py-1 bg-gray-700 text-white rounded outline-none focus:ring-1 focus:ring-violet-400"
+              type="text"
+              value="144"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col gap-4">
+        <h2 class="text-white m-0 text-2xl font-bold">Prices:</h2>
+
+        <div class="flex flex-col gap-5">
+          <div class="flex flex-col gap-2">
+            <label class="text-white">Gas Unit Price (in pence)</label>
+            <input
+              id="gas-unit-price"
+              value="6.017"
+              type="text"
+              class="px-2 py-1 bg-gray-700 text-white rounded outline-none focus:ring-1 focus:ring-violet-400"
+            />
+          </div>
+          <div class="flex flex-col gap-2">
+            <label class="text-white">Gas Standing Charge (in pence)</label>
+            <input
+              id="gas-standing-charge"
+              value="29.813"
+              type="text"
+              class="px-2 py-1 bg-gray-700 text-white rounded outline-none focus:ring-1 focus:ring-violet-400"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-5">
+          <div class="flex flex-col gap-2">
+            <label class="text-white">Electricity Unit Price (in pence)</label>
+            <input
+              id="electricity-unit-price"
+              value="23.444"
+              type="text"
+              class="px-2 py-1 bg-gray-700 text-white rounded outline-none focus:ring-1 focus:ring-violet-400"
+            />
+          </div>
+          <div class="flex flex-col gap-2">
+            <label class="text-white"
+              >Electricity Standing Charge (in pence)</label
+            >
+            <input
+              id="electricity-standing-charge"
+              value="61.219"
+              type="text"
+              class="px-2 py-1 bg-gray-700 text-white rounded outline-none focus:ring-1 focus:ring-violet-400"
+            />
+           
+          </div>
+          <div class="flex gap-2 items-center">
+            <input
+              class="w-5 h-5 cursor-pointer"
+              id="include-vat"
+              type="checkbox"
+            />
+            <label for="include-vat" class="text-white cursor-pointer"
+              >Include VAT</label
+            >
+          </div>
+        </div>
+      </div>
+
+      
+
+      <button
+        onclick="submit()"
+        class="text-white px-4 py-1 bg-blue-600 rounded-lg font-semibold"
+      >
+        Submit
+      </button>
+
+     
+
+      <div class="flex gap-2 max-[500px]:flex-col">
+        <p class="text-white text-xl ">your monthly payment would be:</p>
+        <p class="text-white text-xl  font-bold" id="amount"></p>
+      </div>
+    </div>
+  </body>
+  <script src="./index.js"></script>
+</html>
